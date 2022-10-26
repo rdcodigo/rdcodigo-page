@@ -7,8 +7,11 @@ module.exports = {
   theme: {
     extend: {},
     fontSize: {
-      xxl: ['80px', '155px'],
-      xs: ['20px', '25px']
+      xl: ['100px', '200px'],
+      md: ['80px', '150px'],
+      m: ['30px', '50px'],
+      sm: ['20px', '25px'],
+      xs: ['15px', '20px'],
     },
     colors: {
       color1: '#D9D9D9',
@@ -22,7 +25,8 @@ module.exports = {
       'amita': ['Amita', 'Georgia'],
     },
     backgroundImage: {
-      'img-header': "url('./public/images/bg-header.jpg')"
+      'img-header': "url('./public/images/bg-header.jpg')",
+      'img-card': "url('./public/images/bg-card.jpg')"
     }
   },
   plugins: [],
