@@ -2,7 +2,7 @@ export default function Card() {
     return (
         <div className="flex justify-center items-center bg-color1 bg-cover w-full h-screen">
 
-            <div className='absolute left-[10%] h-[85%] w-[30%] bg-color4 bg-opacity-90'>
+            <div className='absolute left-[10%] h-[85%] w-[30%] bg-color4'>
 
             </div>
 
@@ -13,7 +13,6 @@ export default function Card() {
                 </div>
 
                 <div className='flex flex-1 bg-color1 bg-opacity-90'>
-
                     <div className='w-[60%] h-full' />
                     <div className='w-[40%] h-full flex justify-center items-center'>
                         <div className='flex gap-1 flex-col text-sm 2xl:text-m text-color3 font-amita font-bold w-[80%] h-[70%]'>
@@ -26,11 +25,13 @@ export default function Card() {
                             <h2 className='text-xs text-color3 opacity-60 font-buda'>Localização:</h2>
                             <span className='indent-5'>Patos - PB</span>
                             <h2 className='text-xs text-color3 opacity-60 font-buda'>Habilidades:</h2>
-                            <div className="flex gap-3 items-center py-2">
-                                <img className='w-[60px] h-[30px] 2xl:w-[90px] 2xl:h-[50px] ' src="../../public/images/tailwind.png" alt="Github Icon" />
-                                <img className='w-[40px] 2xl:w-[70px]' src="../../public/images/react.png" alt="Github Icon" />
-                                <img className='w-[40px] 2xl:w-[70px]' src="../../public/images/nodejs.png" alt="Github Icon" />
-                                <img className='w-[40px] 2xl:w-[70px]' src="../../public/images/java.png" alt="Github Icon" />
+                            <div className="grid grid-cols-3 gap-1 items-center py-2">
+                                <img className='drop-shadow-[5px_5px_3px_rgba(13,14,16,1)] w-[40px] 2xl:w-[60px]' src="../../public/images/html.png" alt="HTML Icon" />
+                                <img className='drop-shadow-[5px_5px_3px_rgba(13,14,16,1)] w-[40px] 2xl:w-[60px]' src="../../public/images/css.png" alt="Github Icon" />
+                                <img className='drop-shadow-[5px_5px_3px_rgba(13,14,16,1)] w-[40px] 2xl:w-[60px]' src="../../public/images/javascript.png" alt="Github Icon" />
+                                <img className='drop-shadow-[5px_5px_3px_rgba(13,14,16,1)] w-[40px] 2xl:w-[60px]' src="../../public/images/node.png" alt="Github Icon" />
+                                <img className='drop-shadow-[5px_5px_3px_rgba(13,14,16,1)] w-[40px] 2xl:w-[60px]' src="../../public/images/tailwind.png" alt="Github Icon" />
+                                <img className='drop-shadow-[5px_5px_3px_rgba(13,14,16,1)] w-[40px] 2xl:w-[60px]' src="../../public/images/react.png" alt="Github Icon" />
                             </div>
                         </div>
                     </div>
