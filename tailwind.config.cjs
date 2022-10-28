@@ -8,9 +8,9 @@ module.exports = {
     extend: {},
     fontSize: {
       xl: ['100px', '200px'],
-      md: ['80px', '150px'],
+      l: ['80px', '150px'],
       m: ['30px', '50px'],
-      sm: ['20px', '25px'],
+      s: ['20px', '25px'],
       xs: ['15px', '20px'],
     },
     colors: {
