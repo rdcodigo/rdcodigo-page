@@ -1,11 +1,11 @@
 import Header from "./components/Header"
-import Card from "./components/Card"
+import About from "./components/About"
 
 export default function App() {
   return (
     <>
       <Header></Header>
-      <Card></Card>
+      <About></About>
     </>
   )
 }

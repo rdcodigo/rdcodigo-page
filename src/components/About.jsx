@@ -1,6 +1,6 @@
 export default function Card() {
     return (
-        <div className="flex justify-center items-center bg-color1 bg-cover w-full h-screen">
+        <div id="about" className="flex justify-center items-center bg-color1 bg-cover w-full h-screen">
 
             <div className='absolute left-[10%] h-[85%] w-[30%] bg-color4'>
 
@@ -12,8 +12,7 @@ export default function Card() {
                     <img className="z-10 absolute bottom-0 left-0 w-[400px] 2xl:w-[600px]" src="../../../public/images/profile-image.png" alt="" />
                 </div>
 
-                <div className='flex flex-1 bg-color1 bg-opacity-90'>
-                    <div className='w-[60%] h-full' />
+                <div className='flex flex-1 flex-row-reverse bg-color1 bg-opacity-90'>
                     <div className='w-[40%] h-full flex justify-center items-center'>
                         <div className='flex gap-1 flex-col text-sm 2xl:text-m text-color3 font-amita font-bold w-[80%] h-[70%]'>
                             <h2 className='text-xs text-color3 opacity-60 font-buda'>Nome:</h2>
