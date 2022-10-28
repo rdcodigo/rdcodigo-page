@@ -1,3 +1,4 @@
+import { Link } from "react-scroll"
 
 export default function Header() {
     return (
@@ -14,8 +15,8 @@ export default function Header() {
                     </div>
 
                     <div className="flex self-center gap-10 text-color1 font-buda text-m 2xl:text-sm">
-                        <a href="#about" className="w-[250px] text-center bg-color3 bg-opacity-80 hover:text-color3 hover:bg-color1 border rounded-xl border-color1 px-10 2xl:text-m 2xl:w-[250px]">SOBRE</a>
-                        <a className="w-[250px] text-center bg-color3 bg-opacity-80 hover:text-color3 hover:bg-color1 border rounded-xl border-color1 px-10 2xl:text-m 2xl:w-[250px]">PORTFOLIO</a>
+                        <Link to="about" smooth={true} duration={300} className="w-[250px] text-center bg-color3 bg-opacity-80 hover:text-color3 hover:bg-color1 border rounded-xl border-color1 px-10 2xl:text-m 2xl:w-[250px]">SOBRE</Link>
+                        <Link to="portfolio" smooth={true} duration={300} className="w-[250px] text-center bg-color3 bg-opacity-80 hover:text-color3 hover:bg-color1 border rounded-xl border-color1 px-10 2xl:text-m 2xl:w-[250px]">PORTFOLIO</Link>
                     </div>
                 </div>
                 <div className="flex flex-1 flex-col items-center justify-center gap-5 2xl:gap-10">
