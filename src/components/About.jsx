@@ -1,12 +1,16 @@
-export default function Card() {
+import React from "react"
+
+export default function About() {
     return (
-        <div id="about" className="flex justify-center items-center bg-color1 bg-cover w-full h-screen">
+        <div id="about" className="relative flex justify-center items-center bg-color1 bg-cover w-full h-screen">
+            <h1 className="absolute right-[10%] top-[5%] z-30 text-m font-amita text-color3">Sobre</h1>
 
             <div className='absolute left-[10%] h-[85%] w-[30%] bg-color4'>
 
             </div>
 
             <div className="flex relative h-[400px] w-[700px] 2xl:h-[600px] 2xl:w-[1000px] drop-shadow-[10px_35px_35px_rgba(0,0,0,1)] justify-end">
+                
 
                 <div>
                     <img className="z-10 absolute bottom-0 left-0 w-[400px] 2xl:w-[600px]" src="../../../public/images/profile-image.png" alt="" />
