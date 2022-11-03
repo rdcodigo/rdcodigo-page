@@ -3,14 +3,14 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
 import {
-    portfolioItemImg,
-    portfolioItemLink,
-    PortfolioItem,
-    portfolioItemTitle,
-    portfolioItemParagraph,
-    portfolioItemRepository,
-    portfolioItemFooter
-} from "./PortfolioItem";
+    projectImg,
+    projectLink,
+    projectTitle,
+    projectParagraph,
+    projectRepository,
+    projectFooter,
+    Project
+} from "./Project";
 
 
 const variants = {
@@ -44,12 +44,12 @@ const swipePower = (offset, velocity) => {
 export const Portfolio = () => {
     const [[page, direction], setPage] = useState([0, 0]);
 
-    const imageIndex = wrap(0, portfolioItemImg.length, page);
-    const linkIndex = wrap(0, portfolioItemLink.length, page);
-    const titleIndex = wrap(0, portfolioItemTitle.length, page);
-    const paragraphIndex = wrap(0, portfolioItemParagraph.length, page);
-    const footerIndex = wrap(0, portfolioItemFooter.length, page);
-    const repositoryIndex = wrap(0, portfolioItemRepository.length, page);
+    const imageIndex = wrap(0, projectImg.length, page);
+    const linkIndex = wrap(0, projectLink.length, page);
+    const titleIndex = wrap(0, projectTitle.length, page);
+    const paragraphIndex = wrap(0, projectParagraph.length, page);
+    const footerIndex = wrap(0, projectFooter.length, page);
+    const repositoryIndex = wrap(0, projectRepository.length, page);
 
     const paginate = (newDirection) => {
         setPage([page + newDirection, newDirection]);
@@ -57,10 +57,19 @@ export const Portfolio = () => {
 
     return (
         <div id="portfolio" className="flex items-center bg-color3 bg-cover w-full h-screen relative px-[5%]">
-            <h1 className="absolute right-[10%] top-[5%] text-m font-amita text-color4">Portfolio</h1>
             <AnimatePresence initial={false} custom={direction}>
+                <motion.h1
+                    whileInView={{ scale: [0, 1] }}
+                    className="absolute right-[10%] top-[5%] z-30 text-m font-amita text-color1 underline"
+                >
+                    Projetos
+                </motion.h1>
+
                 <div>
                     <motion.div
+                        whileInView={{ scale: [0, 1] }}
+                    >
+                        <motion.div
                         key={page}
                         custom={direction}
                         variants={variants}
@@ -68,8 +77,10 @@ export const Portfolio = () => {
                         animate="center"
                         exit="exit"
                         transition={{
-                            x: { type: "spring", stiffness: 300, damping: 30 },
-                            opacity: { duration: 0.2 }
+                            x: { type: "spring",
+                            stiffness: 300,
+                            damping: 30 },
+                            opacity: { duration: 0.2 },
                         }}
                         drag="x"
                         dragConstraints={{ left: 0, right: 0 }}
@@ -82,15 +93,18 @@ export const Portfolio = () => {
                             } else if (swipe > swipeConfidenceThreshold) {
                                 paginate(-1);
                             }
-                        }}>
-                        <PortfolioItem
-                            link={portfolioItemLink[linkIndex]}
-                            img={portfolioItemImg[imageIndex]}
-                            title={portfolioItemTitle[titleIndex]}
-                            paragraph={portfolioItemParagraph[paragraphIndex]}
-                            footer={portfolioItemFooter[footerIndex]}
-                            repository={portfolioItemRepository[repositoryIndex]}
-                        />
+                        }}
+                        >
+                            <Project
+                                link={projectLink[linkIndex]}
+                                img={projectImg[imageIndex]}
+                                title={projectTitle[titleIndex]}
+                                paragraph={projectParagraph[paragraphIndex]}
+                                footer={projectFooter[footerIndex]}
+                                repository={projectRepository[repositoryIndex]}
+                            />
+                        </motion.div>
+
                     </ motion.div>
                 </div>
             </AnimatePresence>

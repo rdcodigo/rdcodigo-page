@@ -1,64 +1,64 @@
 //Images Links
 import memoryGameImg from "../../public/images/memoryGame.png"
-import emBreveImg from "../../public/images/emBreve.jpg"
+import pageImg from "../../public/images/page.png"
 
-export const portfolioItemImg = [
+export const projectImg = [
     memoryGameImg,
-    emBreveImg
+    pageImg
 ]
 
 //Deploy Links
 const memoryGameLink = "https://memory-game-xi-wheat.vercel.app/"
-const emBreveLink = ""
+const pageLink = ""
 
-export const portfolioItemLink = [
+export const projectLink = [
     memoryGameLink,
-    emBreveLink
+    pageLink
 ]
 
 // Repository Links
 const memoryGameRepository = "https://github.com/rdcodigo/memory-game"
-const emBreveRepository = ""
+const pageRepository = "https://github.com/rdcodigo/page"
 
-export const portfolioItemRepository = [
+export const projectRepository = [
     memoryGameRepository,
-    emBreveRepository
+    pageRepository
 ]
 
 // Items Titles
 const memoryGameTitle = "Memory Game"
-const emBreveTitle = ""
+const pageTitle = "Página pessoal"
 
-export const portfolioItemTitle = [
+export const projectTitle = [
     memoryGameTitle,
-    emBreveTitle
+    pageTitle
 ]
 
 // Items Paragraphs
 const memoryGameParagraph = "Jogo desenvolvido durante o curso Desenvolvedor Web Full-stack do programador BR."
-const emBreveParagraph = "MAIS PROJETOS EM BREVE"
+const pageParagraph = "Esta página pessoal onde podem obter informações sobre mim e meus projetos."
 
-export const portfolioItemParagraph = [
+export const projectParagraph = [
     memoryGameParagraph,
-    emBreveParagraph
+    pageParagraph
 ]
 
 // Items Footers
 const memoryGameFooter = "Acesse o repositório"
-const emBreveFooter = ""
+const pageFooter = "Acesse o repositório"
 
-export const portfolioItemFooter = [
+export const projectFooter = [
     memoryGameFooter,
-    emBreveFooter
+    pageFooter
 ]
 
 
 
-export function PortfolioItem(props) {
+export function Project(props) {
     return (
         <div className="flex items-center">
             <a href={props.link} target="_blank" className="w-60%">
-                <img className="relative h-[350px] w-[700px] 2xl:h-[600px] 2xl:w-[1000px] drop-shadow-[10px_35px_35px_rgba(0,0,0,1)] justify-end rounded"
+                <img className="relative h-[350px] w-[700px] 2xl:h-[600px] 2xl:w-[1000px] drop-shadow-[10px_35px_35px_rgba(0,0,0,1)] justify-end rounded hover:opacity-50"
                     src={props.img}
                 />
             </a>

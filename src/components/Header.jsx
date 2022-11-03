@@ -3,7 +3,7 @@ import { Link } from "react-scroll"
 
 export default function Header() {
     return (
-        <div id="" className="bg-img-header bg-cover w-full h-screen text-color1">
+        <div id="header" className="bg-img-header bg-cover w-full h-screen text-color1">
             <div className="flex h-full w-full p-6 xl:p-20">
                 <div className="flex flex-col flex-1 justify-between py-10">
                     <div className="flex gap-10 self-center ">
@@ -17,7 +17,7 @@ export default function Header() {
 
                     <div className="flex self-center gap-10 text-color1 font-buda text-m 2xl:text-sm">
                         <Link to="about" smooth={true} duration={300} className="w-[250px] text-center bg-color3 bg-opacity-80 hover:text-color3 hover:bg-color1 border rounded-xl border-color1 px-10 2xl:text-m 2xl:w-[250px]">SOBRE</Link>
-                        <Link to="portfolio" smooth={true} duration={300} className="w-[250px] text-center bg-color3 bg-opacity-80 hover:text-color3 hover:bg-color1 border rounded-xl border-color1 px-10 2xl:text-m 2xl:w-[250px]">PORTFOLIO</Link>
+                        <Link to="portfolio" smooth={true} duration={300} className="w-[250px] text-center bg-color3 bg-opacity-80 hover:text-color3 hover:bg-color1 border rounded-xl border-color1 px-10 2xl:text-m 2xl:w-[250px]">PROJETOS</Link>
                     </div>
                 </div>
                 <div className="flex flex-1 flex-col items-center justify-center gap-5 2xl:gap-10">
