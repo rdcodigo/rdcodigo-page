@@ -11,8 +11,8 @@ import profileImg from "../../public/images/profile.png"
 
 
 const variants = {
-    leftOut: { x: -300, opacity: 0 },
-    rigthOut: { x: +300, opacity: 0 },
+    leftOut: { x: -200, opacity: 0 },
+    rigthOut: { x: +200, opacity: 0 },
     invisible: { opacity: 0 },
     show: { x: 0, opacity: 1 },
 };

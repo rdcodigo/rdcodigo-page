@@ -38,7 +38,7 @@ export const projectTitle = [
 
 // Items Paragraphs
 const memoryGameParagraph = "Jogo desenvolvido durante o curso Desenvolvedor Web Full-stack do programador BR."
-const pageParagraph = "Esta página pessoal onde podem obter informações sobre mim e meus projetos."
+const pageParagraph = "Esta página pessoal que contém informações sobre mim e meus projetos."
 
 export const projectParagraph = [
     memoryGameParagraph,
@@ -55,8 +55,8 @@ export const projectFooter = [
 ]
 
 const variants = {
-    leftOut: { x: -300, opacity: 0 },
-    rigthOut: { x: +300, opacity: 0 },
+    leftOut: { x: -200, opacity: 0 },
+    rigthOut: { x: +200, opacity: 0 },
     invisible: { opacity: 0 },
     show: { x: 0, opacity: 1 },
 };
