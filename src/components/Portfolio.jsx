@@ -16,7 +16,7 @@ import {
 const variants = {
     enter: (direction) => {
         return {
-            x: direction > 0 ? 1000 : -1000,
+            x: direction > 0 ? 300 : -300,
             opacity: 0
         };
     },
@@ -28,7 +28,7 @@ const variants = {
     exit: (direction) => {
         return {
             zIndex: 0,
-            x: direction < 0 ? 1000 : -1000,
+            x: direction < 0 ? 300 : -300,
             opacity: 0
         };
     }
@@ -59,29 +59,18 @@ export const Portfolio = () => {
         <div id="portfolio" className="flex items-center bg-color3 bg-cover w-full h-screen relative px-[5%]">
             <AnimatePresence initial={false} custom={direction}>
                 <motion.h1
-                    whileInView={{ scale: [0, 1] }}
+                    initial={{ x: -100, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
                     className="absolute right-[10%] top-[5%] z-30 text-m font-amita text-color1 underline"
                 >
                     Projetos
                 </motion.h1>
 
                 <div>
-                    <motion.div
-                        whileInView={{ scale: [0, 1] }}
-                    >
+                    <motion.div>
                         <motion.div
                         key={page}
                         custom={direction}
-                        variants={variants}
-                        initial="enter"
-                        animate="center"
-                        exit="exit"
-                        transition={{
-                            x: { type: "spring",
-                            stiffness: 300,
-                            damping: 30 },
-                            opacity: { duration: 0.2 },
-                        }}
                         drag="x"
                         dragConstraints={{ left: 0, right: 0 }}
                         dragElastic={1}

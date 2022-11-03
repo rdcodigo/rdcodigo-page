@@ -1,17 +1,11 @@
 import React from "react"
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const variants = {
-    leftOut: { x: -1000, opacity: 0 },
-    rigthOut: { x: +1000, opacity: 0 },
+    leftOut: { x: -300, opacity: 0 },
+    rigthOut: { x: +300, opacity: 0 },
     invisible: { opacity: 0 },
     show: { x: 0, opacity: 1 },
-    transition: {
-        type: "spring",
-        damping: 0,
-        mass: 0.2,
-        stifness: 150
-    }
 };
 
 export default function About() {
@@ -20,9 +14,8 @@ export default function About() {
         <div id="about" className="relative flex justify-center items-center bg-color1 bg-cover w-full h-screen">
 
             <motion.h1
-                variants={variants}
-                initial="leftOut"
-                whileInView="show"
+                initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
                 className="absolute right-[10%] top-[5%] z-30 text-m font-amita text-color3 underline"
             >
                 Sobre
@@ -38,8 +31,8 @@ export default function About() {
                     mass: 0.5,
                     stifness: 100
                 }}
-                className='absolute left-[10%] h-[85%] w-[30%] bg-color4'>
-
+                className='absolute left-[10%] h-[75%] w-[30%] bg-color4'
+            >
             </motion.div>
 
             <motion.div
@@ -52,16 +45,15 @@ export default function About() {
                     mass: 0.5,
                     stifness: 100
                 }}
-                className="flex relative h-[400px] w-[700px] 2xl:h-[600px] 2xl:w-[1000px] drop-shadow-[10px_25px_25px_rgba(0,0,0,1)] justify-end">
-
-
+                className="flex relative w-[85%] h-[60%] m-[5%] md:h-[400px] md:w-[700px] 2xl:h-[600px] 2xl:w-[1000px] drop-shadow-[5px_15px_15px_rgba(0,0,0,1)] md:drop-shadow-[10px_25px_25px_rgba(0,0,0,1)] justify-end"
+            >
                 <div>
-                    <img className="z-10 absolute bottom-0 left-0 w-[400px] 2xl:w-[600px]" src="../../../public/images/profile-image.png" alt="" />
+                    <img className="z-10 absolute bottom-0 left-0 w-[130px] md:w-[400px] 2xl:w-[600px]" src="../../../public/images/profile-image.png" alt="" />
                 </div>
 
-                <div className='flex flex-1 flex-row-reverse bg-color1 bg-opacity-90'>
-                    <div className='w-[40%] h-full flex justify-center items-center'>
-                        <div className='flex gap-1 flex-col text-sm 2xl:text-m text-color3 font-amita font-bold w-[80%] h-[70%]'>
+                <div className='flex flex-1 flex-row-reverse bg-color1 bg-opacity-70 md:bg-opacity-90'>
+                    <div className='w-[60%] md:w-[40%] h-full flex justify-center items-center'>
+                        <div className='flex gap-1 flex-col justify-center text-xxs md:text-sm 2xl:text-m text-color3 font-amita font-bold w-[80%] h-[80%]'>
                             <h2 className='text-xs text-color3 opacity-60 font-buda'>Nome:</h2>
                             <span className='indent-5'>Diego Rodrigues</span>
                             <h2 className='text-xs text-color3 opacity-60 font-buda'>Graduação:</h2>
