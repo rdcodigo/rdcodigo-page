@@ -1,6 +1,15 @@
 import React from "react"
 import { motion } from "framer-motion";
 
+import htmlImg from "../../public/images/html.png"
+import cssImg from "../../public/images/css.png"
+import javaScriptImg from "../../public/images/javascript.png"
+import reactImg from "../../public/images/react.png"
+import tailwindImg from "../../public/images/tailwind.png"
+import nodeImg from "../../public/images/node.png"
+import profileImg from "../../public/images/profile.png"
+
+
 const variants = {
     leftOut: { x: -300, opacity: 0 },
     rigthOut: { x: +300, opacity: 0 },
@@ -48,7 +57,7 @@ export default function About() {
                 className="flex relative w-[85%] h-[60%] m-[5%] md:h-[400px] md:w-[700px] 2xl:h-[600px] 2xl:w-[1000px] drop-shadow-[5px_15px_15px_rgba(0,0,0,1)] md:drop-shadow-[10px_25px_25px_rgba(0,0,0,1)] justify-end"
             >
                 <div>
-                    <img className="z-10 absolute bottom-0 left-0 w-[130px] md:w-[400px] 2xl:w-[600px]" src="../../../public/images/profile-image.png" alt="" />
+                    <img className="z-10 absolute bottom-0 left-0 w-[130px] md:w-[400px] 2xl:w-[600px]" src={profileImg} alt="Profile IMG" />
                 </div>
 
                 <div className='flex flex-1 flex-row-reverse bg-color1 bg-opacity-70 md:bg-opacity-90'>
@@ -64,12 +73,12 @@ export default function About() {
                             <span className='indent-5'>Patos - PB</span>
                             <h2 className='text-xs text-color3 opacity-60 font-buda'>Habilidades:</h2>
                             <div className="grid grid-cols-3 gap-1 items-center py-2">
-                                <img className='drop-shadow-[5px_5px_3px_rgba(13,14,16,1)] w-[40px] 2xl:w-[60px]' src="../../public/images/html.png" alt="HTML Icon" />
-                                <img className='drop-shadow-[5px_5px_3px_rgba(13,14,16,1)] w-[40px] 2xl:w-[60px]' src="../../public/images/css.png" alt="Github Icon" />
-                                <img className='drop-shadow-[5px_5px_3px_rgba(13,14,16,1)] w-[40px] 2xl:w-[60px]' src="../../public/images/javascript.png" alt="Github Icon" />
-                                <img className='drop-shadow-[5px_5px_3px_rgba(13,14,16,1)] w-[40px] 2xl:w-[60px]' src="../../public/images/node.png" alt="Github Icon" />
-                                <img className='drop-shadow-[5px_5px_3px_rgba(13,14,16,1)] w-[40px] 2xl:w-[60px]' src="../../public/images/tailwind.png" alt="Github Icon" />
-                                <img className='drop-shadow-[5px_5px_3px_rgba(13,14,16,1)] w-[40px] 2xl:w-[60px]' src="../../public/images/react.png" alt="Github Icon" />
+                                <img className='drop-shadow-[5px_5px_3px_rgba(13,14,16,1)] w-[40px] 2xl:w-[60px]' src={htmlImg} alt="HTML Icon" />
+                                <img className='drop-shadow-[5px_5px_3px_rgba(13,14,16,1)] w-[40px] 2xl:w-[60px]' src={cssImg} alt="CSS Icon" />
+                                <img className='drop-shadow-[5px_5px_3px_rgba(13,14,16,1)] w-[40px] 2xl:w-[60px]' src={javaScriptImg} alt="Javascript Icon" />
+                                <img className='drop-shadow-[5px_5px_3px_rgba(13,14,16,1)] w-[40px] 2xl:w-[60px]' src={nodeImg} alt="Node Icon" />
+                                <img className='drop-shadow-[5px_5px_3px_rgba(13,14,16,1)] w-[40px] 2xl:w-[60px]' src={tailwindImg} alt="Tailwind Icon" />
+                                <img className='drop-shadow-[5px_5px_3px_rgba(13,14,16,1)] w-[40px] 2xl:w-[60px]' src={reactImg} alt="React Icon" />
                             </div>
                         </div>
                     </div>

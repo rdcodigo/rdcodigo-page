@@ -27,8 +27,7 @@ module.exports = {
       'amita': ['Amita', 'Georgia'],
     },
     backgroundImage: {
-      'img-header': "url('./public/images/bg-header.jpg')",
-      'img-card': "url('./public/images/bg-card.jpg')"
+      'img-header': "url('/public/images/bg-header.jpg')"
     }
   },
   plugins: [],

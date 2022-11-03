@@ -1,6 +1,9 @@
 import React from "react"
 import { Link } from "react-scroll"
 
+import linkedinImg from "../../public/images/linkedin.png"
+import githubImg from "../../public/images/github.png"
+
 export default function Header() {
     return (
         <div id="header" className="bg-img-header bg-cover w-full h-screen text-color1">
@@ -8,10 +11,10 @@ export default function Header() {
                 <div className="flex flex-col-reverse lg:flex-col flex-1 justify-evenly lg:justify-between lg:py-10">
                     <div className="flex gap-10 self-center ">
                         <a href="https://www.linkedin.com/in/rdcodigo/" target="_blank">
-                            <img className=' border-color1 rounded-xl p-2 w-[130px] hover:w-[200px] lg:w-[200px] lg:hover:w-[250px] 2xl:w-[300px] 2xl:hover:w-[350px] duration-500' src="../../public/images/linkedin.png" alt="Linkedin Icon" />
+                            <img className=' border-color1 rounded-xl p-2 w-[130px] hover:w-[200px] lg:w-[200px] lg:hover:w-[250px] 2xl:w-[300px] 2xl:hover:w-[350px] duration-500' src={linkedinImg} alt="Linkedin Icon" />
                         </a>
                         <a href="https://github.com/rdcodigo" target="_blank">
-                            <img className=' border-color1 rounded-xl p-2 w-[130px] hover:w-[200px] lg:w-[200px] lg:hover:w-[250px] 2xl:w-[300px] 2xl:hover:w-[350px] duration-500' src="../../public/images/github.png" alt="Github Icon" />
+                            <img className=' border-color1 rounded-xl p-2 w-[130px] hover:w-[200px] lg:w-[200px] lg:hover:w-[250px] 2xl:w-[300px] 2xl:hover:w-[350px] duration-500' src={githubImg} alt="Github Icon" />
                         </a>
                     </div>
 
