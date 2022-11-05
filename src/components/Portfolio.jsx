@@ -2,6 +2,10 @@ import React from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
+import { Link } from "react-scroll";
+
+import scrollToTopImg from "../../public/images/scrollToTopImg.png"
+
 import {
     projectImg,
     projectLink,
@@ -104,6 +108,16 @@ export const Portfolio = () => {
             <div className="prev absolute right-[2%] top-[35%] bg-color1 rounded-[30px] w-[15px] h-[30%] flex justify-center items-center cursor-pointer font-bold text-s z-20 opacity-20 hover:opacity-100" onClick={() => paginate(-1)}>
                 {"‣"}
             </div>
+
+            <Link to="header" smooth={true} duration={300} className="absolute bottom-0 right-[50%] translate-x-[50%]">
+                <motion.img
+                    key={scrollToTopImg}
+                    src={scrollToTopImg}
+                    alt="Scroll Down"
+                    animate={{ y: [0, -50, 0] }}
+                    transition={{ duration: 1, repeat: Infinity }}
+                    className="cursor-pointer w-[30px] opacity-30 hover:opacity-100 md:w-[50px] 2xl:w-[70px] duration-500" />
+            </Link>
         </div>
     );
 };

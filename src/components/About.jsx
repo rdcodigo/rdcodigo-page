@@ -1,5 +1,6 @@
 import React from "react"
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 import htmlImg from "../../public/images/html.png"
 import cssImg from "../../public/images/css.png"
@@ -8,6 +9,7 @@ import reactImg from "../../public/images/react.png"
 import tailwindImg from "../../public/images/tailwind.png"
 import nodeImg from "../../public/images/node.png"
 import profileImg from "../../public/images/profile.png"
+import scrollToPortfolioImg from "../../public/images/scrollToPortfolioImg.png"
 
 
 const variants = {
@@ -87,6 +89,15 @@ export default function About() {
 
             </motion.div>
 
+            <Link to="portfolio" smooth={true} duration={300} className="absolute bottom-0 right-[50%] translate-x-[50%]">
+                <motion.img
+                    key={scrollToPortfolioImg}
+                    src={scrollToPortfolioImg}
+                    alt="Scroll Down"
+                    animate={{ y: [0, -50, 0] }}
+                    transition={{ duration: 1, repeat: Infinity }}
+                    className="cursor-pointer w-[30px] opacity-30 hover:opacity-100 md:w-[50px] 2xl:w-[70px] duration-500" />
+            </Link>
         </div>
     )
 }
