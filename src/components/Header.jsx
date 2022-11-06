@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 import linkedinImg from "../../public/images/linkedin.png"
 import githubImg from "../../public/images/github.png"
-import scrollToAboutImg from "../../public/images/scrollToAboutImg.png"
+import scrollDownImg from "../../public/images/scrollDownImg.png"
 import { Link } from "react-scroll"
 
 export default function Header() {
@@ -30,13 +30,13 @@ export default function Header() {
                 </div>
                 <Link to="about" smooth={true} duration={300} className="absolute bottom-0 right-[50%] translate-x-[50%]">
                     <motion.img
-                        key={scrollToAboutImg}
-                        src={scrollToAboutImg}
+                        key={scrollDownImg}
+                        src={scrollDownImg}
                         alt="Scroll Down"
                         initial={{y: 0}}
                         animate={{y: -50}}
                         transition={{ duration: 1, repeat: Infinity }}
-                        className="cursor-pointer w-[30px] opacity-30 hover:opacity-100 md:w-[50px] 2xl:w-[70px] duration-500"  />
+                        className="cursor-pointer bottom-0 opacity-70 w-[30px] md:w-[50px] 2xl:w-[70px] duration-500"  />
                 </Link>
             </div>
         </div>

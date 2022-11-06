@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
 import { Link } from "react-scroll";
 
-import scrollToTopImg from "../../public/images/scrollToTopImg.png"
+import scrollTopImg from "../../public/images/scrollTopImg.png"
 
 import {
     projectImg,
@@ -111,12 +111,12 @@ export const Portfolio = () => {
 
             <Link to="header" smooth={true} duration={300} className="absolute bottom-0 right-[50%] translate-x-[50%]">
                 <motion.img
-                    key={scrollToTopImg}
-                    src={scrollToTopImg}
+                    key={scrollTopImg}
+                    src={scrollTopImg}
                     alt="Scroll Down"
                     animate={{ y: [0, -50, 0] }}
                     transition={{ duration: 1, repeat: Infinity }}
-                    className="cursor-pointer w-[30px] opacity-30 hover:opacity-100 md:w-[50px] 2xl:w-[70px] duration-500" />
+                    className="cursor-pointer bottom-0 opacity-70 w-[30px] md:w-[50px] 2xl:w-[70px] duration-500" />
             </Link>
         </div>
     );

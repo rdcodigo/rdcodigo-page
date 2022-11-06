@@ -9,7 +9,7 @@ import reactImg from "../../public/images/react.png"
 import tailwindImg from "../../public/images/tailwind.png"
 import nodeImg from "../../public/images/node.png"
 import profileImg from "../../public/images/profile.png"
-import scrollToPortfolioImg from "../../public/images/scrollToPortfolioImg.png"
+import scrollDownImg from "../../public/images/scrollDownImg.png"
 
 
 const variants = {
@@ -91,12 +91,12 @@ export default function About() {
 
             <Link to="portfolio" smooth={true} duration={300} className="absolute bottom-0 right-[50%] translate-x-[50%]">
                 <motion.img
-                    key={scrollToPortfolioImg}
-                    src={scrollToPortfolioImg}
+                    key={scrollDownImg}
+                    src={scrollDownImg}
                     alt="Scroll Down"
                     animate={{ y: [0, -50, 0] }}
                     transition={{ duration: 1, repeat: Infinity }}
-                    className="cursor-pointer w-[30px] opacity-30 hover:opacity-100 md:w-[50px] 2xl:w-[70px] duration-500" />
+                    className="cursor-pointer bottom-0 opacity-70 w-[30px] md:w-[50px] 2xl:w-[70px] duration-500" />
             </Link>
         </div>
     )
